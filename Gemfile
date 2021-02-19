@@ -9,6 +9,10 @@ gem 'active_storage_validations', '0.8.2'
 gem 'bcrypt',                     '3.1.13'
 gem 'faker',                      '2.1.2'
 gem 'will_paginate',              '3.1.8'
+gem 'kaminari', '~> 0.17.0'
+gem 'carrierwave', '~> 2.0'
+gem 'acts-as-taggable-on', '~> 6.0'
+gem 'gretel'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
@@ -18,6 +22,8 @@ gem 'webpacker',                  '4.0.7'
 gem 'turbolinks',                 '5.2.0'
 gem 'jbuilder',                   '2.9.1'
 gem 'bootsnap',                   '1.4.5', require: false
+gem 'devise'
+
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
@@ -29,6 +35,8 @@ group :development do
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'bullet'
+  gem 'brakeman', :require => false
 end
 
 group :test do
