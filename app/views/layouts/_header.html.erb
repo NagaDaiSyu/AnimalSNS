@@ -15,10 +15,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Disabled</a>
       </li>
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log in", new_user_session_path%>
+    <% end%>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
   </div>
 </nav>
