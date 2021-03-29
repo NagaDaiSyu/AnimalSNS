@@ -6,10 +6,12 @@ class User < ApplicationRecord
 
   validates :name, presence: true #追記
   # validates :profile, length: { maximum: 200} # 追記
+  has_many :posts, dependent: :destroy
 
   
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
+      user.name = "guest"
       user.password = SecureRandom.urlsafe_base64
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
