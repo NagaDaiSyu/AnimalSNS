@@ -85,9 +85,9 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
-    bootstrap (4.3.1)
+    bootstrap (5.0.0)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
+      popper_js (>= 2.9.2, < 3)
       sassc-rails (>= 2.0.0)
     bootstrap-will_paginate (1.0.0)
       will_paginate
@@ -195,7 +195,7 @@ GEM
       shellany (~> 0.0)
     orm_adapter (0.5.0)
     pg (1.1.4)
-    popper_js (1.16.0)
+    popper_js (2.9.2)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -328,7 +328,7 @@ DEPENDENCIES
   aws-sdk-s3 (= 1.46.0)
   bcrypt (= 3.1.13)
   bootsnap (= 1.4.5)
-  bootstrap (~> 4.3.1)
+  bootstrap (~> 5.0.0)
   bootstrap-will_paginate (= 1.0.0)
   brakeman
   bullet
@@ -343,7 +343,7 @@ DEPENDENCIES
   image_processing (= 1.9.3)
   jbuilder (= 2.9.1)
   jquery-rails
-  kaminari (~> 0.17.0)
+  kaminari
   listen (= 3.1.5)
   mini_magick (= 4.9.5)
   minitest (= 5.11.3)

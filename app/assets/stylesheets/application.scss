@@ -1,24 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
-
 @import "bootstrap";
+
+$gray-medium-light: #eaeaea;
 
 .navbar-nav {
   padding: 10px;
 }
 
+.container-fluid {
+  padding: 0;
+}
 
+
+/* Home */
+
+.top_title_b {
+  color: black;
+}
+
+/*↓home_topに変更したらよくなる*/
+.top_title {
+  background-image: url("top2.jpg");
+  background-repeat:no-repeat;
+  background-position:center bottom; /*背景画像を、横中央、底辺に配置。*/
+  background-size: cover; /*背景画像をコンテンツの横幅いっぱいに表示する。*/
+  padding: 200px 0;
+  margin-bottom: -100px;
+  width: 100%;
+  color: white;
+}
+
+.title {
+  font-size: 64px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.titleDesc {
+  text-align: center;
+  margin: auto; 
+  margin-bottom: 30px;
+}
+
+.whatsUp {
+  text-align: center;
+  margin: 10 auto;
+}
+
+.section-title::after {
+    content: attr(data-subtitle);
+    display: block;
+    font-size: 24px;
+    color: #aaa;
+    
+}
+
+.desc {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 /* posts */
 
@@ -66,3 +107,94 @@ span.image {
     border: 0;
   }
 }
+
+/* sidebar */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid #D3D3D3;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+
+.follow_form {
+  width: 100%;
+}
+
+
+

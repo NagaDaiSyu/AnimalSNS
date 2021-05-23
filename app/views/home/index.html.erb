@@ -1,3 +1,28 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<%= paginate @users %>
+<div class="home_top">
+  <div class="top_title">
+    <h1 class="title">Animal Healing</h1>
+    <h2 class="titleDesc">可愛い動物でひたすら癒やされるSNS</h2>
+  </div>
+  <div class="top_title_b">
+    <h2 class="whatsUp section-title" data-subtitle="- What -">Animal Healingとは</h2>
+    <p class="desc">みんなで可愛い動物をツイートしまくり、みんなで癒されようというSNSです！</p>
+  </div>
+</div>
+<div class="container">
+  <ol class="posts">
+    <% @posts.each do |post|%>
+    <li id="post-<%= post.id %>">
+      <%= link_to gravatar_for(post.user, size: 50), post.user %>
+      <span class="user"><%= link_to post.user.name, post.user %></span>
+      <span class="content">
+        <%= post.content %>
+        <%= image_tag post.display_image if post.image.attached? %>
+      </span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(post.created_at) %> 前
+      </span>
+    </li>
+    <%end%>
+  </ol>
+</div>
+<!-- paginate @users -->
