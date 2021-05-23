@@ -9,6 +9,9 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def home
+  end
+
 
   def create
     @post = current_user.posts.build(post_params)

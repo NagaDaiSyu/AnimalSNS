@@ -27,6 +27,14 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
+    errors:
+      messages:
+        record_invalid: バリデーションに失敗しました
+      models:
+        user:
+          attributes:
+            email:
+              taken: errors}
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
