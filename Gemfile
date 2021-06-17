@@ -24,7 +24,7 @@ gem 'turbolinks',                 '5.2.0'
 gem 'jbuilder',                   '2.9.1'
 gem 'bootsnap',                   '1.4.5', require: false
 gem 'devise'
-
+gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
