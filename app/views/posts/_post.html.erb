@@ -1,11 +1,20 @@
-<li id="post-<%= post.id %>">
-  <%= link_to gravatar_for(post.user, size: 50), post.user %>
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="content">
-    <%= post.content %>
-    <%= image_tag post.display_image if post.image.attached? %>
-  </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> 前
-  </span>
-</li>
+<div class="row">
+  <div class="col-6">
+    <li id="post-<%= post.id %>">
+      <%= link_to gravatar_for(post.user, size: 50), post.user %>
+      <span class="user"><%= link_to post.user.name, post.user %></span>
+      <span class="content">
+        <%= post.content %>
+        <%= image_tag post.display_image if post.image.attached? %>
+      </span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(post.created_at) %> 前
+      </span>
+    </li>
+  </div>
+  <div class="col-6">
+    <% post.tag_list.each do |tag|%>
+        <%= link_to tag, tags_posts_path, class: 'badge bg-secondary'%>
+    <%end%>
+  </div>
+</div>

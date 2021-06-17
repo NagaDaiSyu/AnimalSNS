@@ -7,21 +7,34 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @tags = Post.tag_counts_on(:tags).most_used(20)    # タグ一覧表示
   end
 
   def home
   end
 
+  def tags
+    @tags = Post.tag_counts_on(:tags)
+  end
 
   def create
     @post = current_user.posts.build(post_params)
     @post.image.attach(params[:post][:image])
+    # @post.tag_list.add('ネコ')
     if @post.save
       flash[:success] = "ツイートを投稿しました！"
       redirect_to root_path #show_path
     else
+      
 
     end
+  end
+
+  def update
+    # @post = current_user.posts
+    # @post.tag_list.add(params[:post][:tag_list[0]])
+    # @post.save
+    # redirect_to root_path
   end
 
   def destroy
@@ -31,7 +44,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:content, :image)
+      params.require(:post).permit(:content, :image, :tag_list)
     end
     
 
