@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
+  root 'home#index'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
-  root 'home#index'
-  get 'home/help'
-  # get '/posts/hashtag/:name' => 'posts#hashtag'
-  # get '/posts/hashtag' => 'posts#hashtag'
-
   resources :users do
     member do
       get :following, :followers
@@ -21,6 +17,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :index]
-  resources :posts, only: [:new, :index, :create, :destroy]
-  resources :relationships,       only: [:create, :destroy]
+  resources :posts, only: [:new, :index, :edit, :create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end
