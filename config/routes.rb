@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  # get 'application/set_search' => 'application#set_search'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get :tags
+      get :search
     end
   end
   resources :users, only: [:show, :index]

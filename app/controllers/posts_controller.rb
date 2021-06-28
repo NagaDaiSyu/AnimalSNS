@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    
+  end
+
   private
 
     def post_params
