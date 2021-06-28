@@ -2,6 +2,14 @@
 
 $gray-medium-light: #eaeaea;
 
+.navbar {
+  padding-left: 20px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
 .navbar-nav {
   padding: 10px;
 }
@@ -13,10 +21,6 @@ $gray-medium-light: #eaeaea;
 
 /* Home */
 
-.top_title_b {
-  color: black;
-}
-
 /*↓home_topに変更したらよくなる*/
 .top_title {
   background-image: url("top2.jpg");
@@ -24,9 +28,15 @@ $gray-medium-light: #eaeaea;
   background-position:center bottom; /*背景画像を、横中央、底辺に配置。*/
   background-size: cover; /*背景画像をコンテンツの横幅いっぱいに表示する。*/
   padding: 200px 0;
-  margin-bottom: -100px;
+  /*margin-bottom: -100px;*/
   width: 100%;
-  color: white;
+  color: #333333;
+}
+
+.top_title_b {
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .title {
@@ -66,6 +76,7 @@ $gray-medium-light: #eaeaea;
 .posts {
   list-style: none;
   padding: 0;
+  padding-left: 50px;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -198,5 +209,15 @@ input {
 
 .edit_destroy_button {
   
+}
+
+.new_post {
+  padding-left: 50px;
+}
+
+/*footer*/
+
+.footer {
+  padding-left: 20px;
 }
 

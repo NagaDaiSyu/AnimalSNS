@@ -20,6 +20,17 @@
       <li class="nav-item">
         <%= link_to "ログアウト", destroy_user_session_path , method: :delete,class: "nav-link" %>
       </li>
+      <li class="nav-item">
+          <%= search_form_for @search, url: search_posts_path do |f| %>
+            <div class="input-group">
+            <%= f.search_field :content_cont, placeholder: "ツイートを検索",class: "form-control"%>
+            <span class="input-group-btn">
+               <!-- f.submit "検索", class: "btn btn-default"%> -->
+               <%= button_tag "検索", :name => nil, class: "btn btn-primary" %>
+            </span>
+            </div>
+          <% end %>
+      </li>
     <% else %>
       <li class="nav-item">
         <%= link_to "かんたんログイン", users_guest_sign_in_path , method: :post , class: "nav-link" %>

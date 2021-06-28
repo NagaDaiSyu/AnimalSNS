@@ -1,18 +1,18 @@
-<!-- <h1>posts#new</h1> -->
-
 <% if user_signed_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
-      <section class="post_form">
-        <%= render 'shared/post_form' %>
-      </section>
-    </aside>
+  <div class="new_post">
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+        <section class="post_form">
+          <%= render 'shared/post_form' %>
+        </section>
+      </aside>
+    </div>
   </div>
 <% else %>
   
