@@ -17,6 +17,11 @@ class PostsController < ApplicationController
     @tags = Post.tag_counts_on(:tags)
   end
 
+  def search_tag
+    @posts = Post.all
+    @tag = Post.find_by(params[:tags])
+  end
+
   def edit 
     @post = Post.find_by(params[:id])
   end
@@ -51,7 +56,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    
+    @posts = Post.tagged_with("#{params[:tag_name]}")
   end
 
   private

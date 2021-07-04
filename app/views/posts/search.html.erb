@@ -1,5 +1,10 @@
 <ol class="posts">
-  「<%= params[:q][:content_cont]%>」で検索&#009;
-  <%= @search_posts.count%>件ヒットしました。
-  <%= render @search_posts %>
+  <%if params[:q]%>
+    「<%= params[:q][:content_cont]%>」で検索&#009;
+    <%= @search_posts.count%>件ヒットしました。
+    <%= render @search_posts %>
+  <%elsif params[:tag_name]%>
+    「<%= params[:tag_name]%>」のタグを検索&#009;
+    <%= render @posts%>
+  <%end%>
 </ol>

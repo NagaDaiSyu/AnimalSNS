@@ -1,6 +1,6 @@
 <%= form_with(model: @post, local: true) do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "思ったことをつぶやいてください" %>
   </div>
   <%= f.label "タグ"%>
   <%= f.text_field :tag_list,  class: "form-control", value: @post.tag_list.join(',')%>
