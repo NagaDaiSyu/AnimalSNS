@@ -1,4 +1,4 @@
 <h1>タグ一覧</h1>
 <% @tags.each do |tag|%>
-  <%= tag%>
+  <%= link_to tag, search_posts_path(tag_name: tag.to_s)%>
 <%end%>
