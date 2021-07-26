@@ -19,13 +19,14 @@ gem 'bootstrap', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'puma',                       '4.3.6'
 gem 'sass-rails',                 '5.1.0'
-gem 'webpacker',                  '4.0.7'
+gem 'webpacker',    '~> 5.0'
 gem 'turbolinks',                 '5.2.0'
 gem 'jbuilder',                   '2.9.1'
 gem 'bootsnap',                   '1.4.5', require: false
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'ransack'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'

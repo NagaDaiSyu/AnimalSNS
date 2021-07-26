@@ -7,8 +7,10 @@
         <%= post.content %>
         <%= image_tag post.display_image if post.image.attached? %>
       </span>
-      <span class="timestamp">
+      <span class="timestamp" id="like_<%= post.id%>">
         Posted <%= time_ago_in_words(post.created_at) %> 前
+        &nbsp;&nbsp;&nbsp;いいね
+        <%= render 'likes/likes', post: post%>
       </span>
     </li>
   </div>

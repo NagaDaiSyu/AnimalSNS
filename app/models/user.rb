@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :name, presence: true #追記
   # validates :profile, length: { maximum: 200} # 追記
   has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :like_posts, through: :likes, source: :post
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
                                   dependent:   :destroy
