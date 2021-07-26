@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'likes/destroy'
   root 'home#index'
   # get 'application/set_search' => 'application#set_search'
   devise_for :users, controllers: {
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
       get :tags
       get :search
     end
+    resource :likes, only: [:create,:destroy]
   end
   resources :users, only: [:show, :index]
   resources :posts, only: [:new, :index, :edit, :create, :destroy]

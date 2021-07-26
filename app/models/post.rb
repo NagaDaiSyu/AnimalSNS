@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
   acts_as_taggable
   belongs_to :user
+  has_many :likes, dependent: :destroy
+  has_many :like_users, through: :like, source: :user
   has_one_attached :image
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
