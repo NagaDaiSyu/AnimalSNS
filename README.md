@@ -1,5 +1,7 @@
 # README
 
+制作時期　2021年半ば
+
 *使用言語
 Ruby<br>
 Rails<br>
