@@ -1,24 +1,23 @@
-# README
+# AnimalSNSとは
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+動物の画像で癒やされるSNSです
 
-Things you may want to cover:
+制作時期　2021年半ば
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*使用言語<br>
+Ruby<br>
+Rails<br>
+javascript<br>
+*機能<br>
+新規登録<br>
+ログイン・ゲストログイン<br>
+ツイート投稿<br>
+ツイート編集・削除<br>
+画像投稿<br>
+タグ投稿<br>
+フォロー・フォロワー<br>
+いいね機能<br>
+ツイート検索・タグ検索<br>
+*作成背景
+普段仕事でPHPばかり使用しているので、<br>
+新しいプログラミング言語にチャレンジしてみたかった
