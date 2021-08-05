@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*使用言語
+Ruby
+Rails
+javascript
 
-Things you may want to cover:
+*機能
+新規登録
+ログイン・ゲストログイン
+ツイート投稿
+ツイート編集・削除
+画像投稿
+タグ投稿
+フォロー・フォロワー
+いいね機能
+ツイート検索・タグ検索
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*作成背景
+普段仕事でPHPばかり使用しているので、
+新しいプログラミング言語にチャレンジしてみたかった
