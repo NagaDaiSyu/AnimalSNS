@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails',                      '6.0.3'
+gem 'rails'
 gem 'active_storage_validations', '0.8.2'
 gem 'aws-sdk-s3',                 '1.46.0', require: false
 gem 'image_processing',           '1.9.3'
@@ -17,7 +17,7 @@ gem 'gretel'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap', '~> 5.0.0'
 gem 'jquery-rails'
-gem 'puma',                       '4.3.6'
+gem 'puma'
 gem 'sass-rails',                 '5.1.0'
 gem 'webpacker',    '~> 5.0'
 gem 'turbolinks',                 '5.2.0'
