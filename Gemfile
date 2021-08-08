@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails'
+gem 'rails', '~> 6.1'
 gem 'active_storage_validations', '0.8.2'
 gem 'aws-sdk-s3',                 '1.46.0', require: false
 gem 'image_processing',           '1.9.3'
@@ -17,7 +17,7 @@ gem 'gretel'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap', '~> 5.0.0'
 gem 'jquery-rails'
-gem 'puma'
+gem 'puma', '4.3.8'
 gem 'sass-rails',                 '5.1.0'
 gem 'webpacker',    '~> 5.0'
 gem 'turbolinks',                 '5.2.0'
@@ -27,6 +27,11 @@ gem 'devise'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'ransack'
 gem 'font-awesome-sass'
+gem  'activesupport',  '>= 6.0.3.1'
+gem  'activestorage',  '6.0.3.1'
+gem  'actionpack',  '= 6.0.3.7'
+gem  'actionview',  '6.0.3.3'
+gem  'activerecord',  '6.0.3.5'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
